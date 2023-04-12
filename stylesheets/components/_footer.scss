@@ -1,0 +1,31 @@
+footer {
+  background-color: rgb(23, 21, 19);
+  margin: 0 auto;
+  padding: 16px;
+
+  h1 {
+    font-family: $headers-font;
+    font-size: 4rem;
+    padding: 8px;
+    margin: 0 auto;
+    color: rgb(240, 231, 222);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+
+    i {
+      font-size: 35px;
+      color: rgb(240, 231, 222);
+      padding: 16px;
+      transition: font-size 0.2s ease-out;
+    }
+
+    .email {
+      p {
+        color: rgb(240, 231, 222);
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.land-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 1px solid rgb(23, 21, 19);
+
+  .info {
+
+    h1 {
+      font-family: $headers-font;
+      font-size: 5rem;
+      padding: 8px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-family: $body-font;
+      padding: 0px 8px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.section {
+  border-bottom: 1px solid rgb(23, 21, 19);
+  margin-top: 16px;
+  padding-bottom: 16px;
+
+  h1 {
+    font-family: $headers-font;
+    font-size: 4rem;
+    padding: 8px;
+    margin: 0 auto;
+  }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .description {
+      padding: 16px;
+
+      p {
+        font-family: $body-font;
+      }
+    }
+  }
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  width: 100%vw;
+}

@@ -1,0 +1,94 @@
+.project-card {
+  border: 1px solid rgb(23, 21, 19);
+  padding: 16px;
+  height: 550px;
+
+  h2 {
+    font-family: $headers-font;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: $headers-font;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  p {
+    font-family: $body-font;
+  }
+
+  .image-carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+
+    img {
+      max-height: 250px;
+      padding: 0 4px;
+    }
+  }
+
+  .stacks {
+    display: flex;
+    flex-wrap: wrap;
+
+    .stack-btn {
+      margin: 4px 4px;
+      letter-spacing: 1px;
+      padding: 10px 16px;
+      outline: 0;
+      border: 1px solid rgb(23, 21, 19);
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+
+      a {
+        text-decoration: none;
+        color: rgb(240, 231, 222);
+        font-family: $body-font;
+        font-weight: bold;
+      }
+    }
+
+    .stack-btn:after {
+      content: "";
+      background-color: rgb(23, 21, 19);
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 4px;
+      left: 4px;
+      transition: 0.2s;
+    }
+
+    .stack-btn:hover:after {
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+
+    i {
+      font-size: 35px;
+      color: rgb(23, 21, 19);
+      padding: 16px;
+      transition: font-size 0.2s ease-out;
+      overflow: hidden;
+    }
+
+    i:hover {
+      color: rgb(63, 56, 49);
+      font-size: 40px;
+    }
+  }
+}
