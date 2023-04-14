@@ -11,21 +11,30 @@ footer {
     color: rgb(240, 231, 222);
   }
 
+  p {
+    font-family: $body-font;
+    color: rgb(240, 231, 222);
+    padding: 8px;
+    margin: 0;
+
+    i {
+      padding-right: 8px;
+    }
+  }
+
   .footer-links {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 
     i {
       font-size: 35px;
       color: rgb(240, 231, 222);
-      padding: 16px;
+      padding: 8px;
       transition: font-size 0.2s ease-out;
     }
 
-    .email {
-      p {
-        color: rgb(240, 231, 222);
-      }
+    i:hover {
+      color: rgb(63, 56, 49);
     }
   }
 }

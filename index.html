@@ -9,25 +9,42 @@
     <link rel="stylesheet" href="/stylesheets/application.scss">
     <script type="module" src="/javascript/application.js" defer></script>
   </head>
-  <body data-controller="hello">
-    <div class="container">
-      <div class="land-page">
-        <div class="video">
-        </div>
-
-        <div class="info">
-          <h1><strong>Mariana Carlota</strong></h1>
-          <h3>Fullstack Web Developer</h3>
-        </div>
+  <body>
+    <div class="side-menu">
+      <div class="menu-projects">
+        <h3>Projects</h3>
       </div>
 
+      <div class="menu-about">
+        <h3>About</h3>
+      </div>
+
+      <div class="menu-contacts">
+        <h3>Contacts</h3>
+      </div>
+
+    </div>
+
+    <div class="land-page">
+      <div class="banner-image">
+        <img src="images/banner.jpg" alt="">
+      </div>
+
+      <div class="info">
+        <span data-controller="menu"></span>
+        <h1><strong>Mariana Carlota</strong></h1>
+        <h3>Fullstack Web Developer</h3>
+      </div>
+    </div>
+
+    <div class="container"></div>
       <div class="section">
         <h1><strong>Projects</strong></h1>
         <div class="projects-cards">
           <div class="project-card">
             <h2>Rentart</h2>
 
-            <div class="image-carousel">
+            <div class="images">
               <img src="images/rentart_homepage.png" alt="">
             </div>
 
@@ -50,7 +67,7 @@
           <div class="project-card">
             <h2>Artify</h2>
 
-            <div class="image-carousel">
+            <div class="images">
               <img src="images/artify_logo.jpg" alt="">
               <img src="images/artify_login.jpg" alt="">
               <img src="images/artify_homepage.jpg" alt="">
@@ -58,7 +75,7 @@
             </div>
 
             <h3>About</h3>
-            <p>AirBnb clone. Platform for renting pieces of art</p>
+            <p>Website designed for mobile with Ruby on Rails where it is possible to take a picture of a monument or landmark anywhere in the world and get information about it. The picture recognition is made with google API <i>Cloud Vision</i> and the information about the landmark is generated with the Wikipedia's API</p>
             <h3>Stacks</h3>
             <div class="stacks">
               <button class="stack-btn"><a href="https://rubyonrails.org/">Ruby on Rails</a></button>
@@ -86,7 +103,7 @@
 
             <p>Before the bootcamp, I have worked mainly in the clothing industry, doing product development or production management. My fashion background has given me a strong creative perspective, which I believe can add value to my work as a web developer.</p>
 
-            <p>In my free time I enjoy <strong>reading</strong>, <strong>running</strong> <i>(run the Lisbon half marathon in 2022)</i>, <strong>traveling</strong>, <strong>drawing</strong>, <strong>sewing</strong> and now <strong>codding!</strong></p>
+            <p>In my free time I enjoy <strong>reading</strong>, <strong>running</strong> <i>(run the Lisbon half marathon in 2022)</i>, <strong>traveling</strong>, <strong>drawing</strong>, <strong>sewing</strong> and, of course <strong>codding!</strong></p>
           </div>
         </div>
       </div>
@@ -94,13 +111,10 @@
 
     <footer>
       <h1><strong>Contact me</strong></h1>
+      <p><i class="fa-solid fa-envelope"></i> marianacc99@hotmail.com</p>
       <div class="footer-links">
         <a href="https://github.com/wJoenn/artify"><i class="fa-brands fa-github"></i></i></a>
         <a href="https://www.linkedin.com/in/mariana-carlota/"><i class="fa-brands fa-linkedin"></i></a>
-        <div class="email">
-          <i class="fa-solid fa-envelope"></i>
-          <p>marianacc99@hotmail.com</p>
-        </div>
       </div>
     </footer>
   </body>
