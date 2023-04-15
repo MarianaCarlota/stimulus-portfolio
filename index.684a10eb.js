@@ -562,11 +562,11 @@ var _indexJs = require("./controllers/index.js");
 },{"./controllers/index.js":"dF3XI"}],"dF3XI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _applicationJs = require("./application.js");
-var _helloController = require("./hello_controller");
-var _helloControllerDefault = parcelHelpers.interopDefault(_helloController);
-(0, _applicationJs.application).register("hello", (0, _helloControllerDefault.default));
+var _menuController = require("./menu_controller");
+var _menuControllerDefault = parcelHelpers.interopDefault(_menuController);
+(0, _applicationJs.application).register("menu", (0, _menuControllerDefault.default));
 
-},{"./application.js":"iXxw6","./hello_controller":"i4YQ0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iXxw6":[function(require,module,exports) {
+},{"./application.js":"iXxw6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./menu_controller":"i97M1"}],"iXxw6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "application", ()=>application);
@@ -2852,14 +2852,23 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"i4YQ0":[function(require,module,exports) {
+},{}],"i97M1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _stimulus = require("@hotwired/stimulus");
 // Connects to data-controller="hello"
 exports.default = class extends (0, _stimulus.Controller) {
+    static targets = [
+        "project"
+    ];
     connect() {
-        console.log("Hello World");
+        console.log("hello world");
+    }
+    scrollToProject() {
+        console.log("hello worldssss");
+        this.projectTarget.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 };
 

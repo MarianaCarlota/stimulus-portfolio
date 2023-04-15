@@ -10,12 +10,38 @@ body {
   margin: 16px 80px 16px 16px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0e7de;
+  border: 1px solid #171513;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #171513;
+}
+
 .land-page {
   height: 100vh;
   border-bottom: 1px solid #171513;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   align-items: center;
+  margin-right: 80px;
   display: grid;
+}
+
+.land-page .banner-image img {
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.land-page .info {
+  padding: 16px;
 }
 
 .land-page .info h1 {
@@ -31,10 +57,78 @@ body {
   font-family: Merriweather, serif;
 }
 
+.side-menu {
+  height: 100vh;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  margin-right: 0;
+  display: flex;
+  position: fixed;
+  right: 0;
+}
+
+.side-menu * {
+  width: 64px;
+  cursor: pointer;
+  margin: 0;
+  padding: 8px 24px;
+  transition-property: width;
+  transition-duration: .5s;
+  display: flex;
+  position: relative;
+}
+
+.side-menu * h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Bebas Neue, cursive;
+  font-size: 2.5rem;
+}
+
+.side-menu .menu-home {
+  background-color: #171513;
+  border: 1px solid #171513;
+  padding: 8px;
+}
+
+.side-menu .menu-home i {
+  color: #f0e7de;
+  padding: 8px;
+}
+
+.side-menu .menu-projects {
+  background-color: #f0e7de;
+  border: 1px solid #171513;
+  flex-grow: 1;
+}
+
+.side-menu .menu-about {
+  height: 100px;
+  background-color: #171513;
+  border: 1px solid #171513;
+}
+
+.side-menu .menu-about h3 {
+  color: #f0e7de;
+  font-weight: lighter;
+}
+
+.side-menu .menu-contacts {
+  height: 100px;
+  background-color: #ba2f28;
+  border: 1px solid #171513;
+}
+
+.side-menu :hover {
+  width: 200px;
+}
+
 .section {
   border-bottom: 1px solid #171513;
-  margin-top: 16px;
-  padding-bottom: 16px;
+  margin: 16px 80px 16px 16px;
+  padding: 32px 0;
 }
 
 .section h1 {
@@ -55,6 +149,19 @@ body {
 
 .section .about-me .description p {
   font-family: Merriweather, serif;
+}
+
+.section .about-me .photo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.section .about-me .photo img {
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
 }
 
 .projects-cards {
@@ -7929,35 +8036,86 @@ body {
 }
 
 .project-card {
-  height: 550px;
+  height: 650px;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  background-color: #f0e7de;
   border: 1px solid #171513;
+  flex-direction: column;
   padding: 16px;
+  display: flex;
+  position: relative;
 }
 
-.project-card h2 {
+.project-card .title {
+  justify-content: space-between;
+  display: flex;
+}
+
+.project-card .title h2 {
   margin: 0;
   font-family: Bebas Neue, cursive;
   font-size: 2.5rem;
 }
 
+.project-card .title .links {
+  justify-content: center;
+  display: flex;
+}
+
+.project-card .title .links i {
+  color: #171513;
+  padding: 8px;
+  font-size: 30px;
+}
+
+.project-card .title .links i:hover {
+  color: #3f3831;
+}
+
+.project-card .future {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.project-card .future .more {
+  height: 200px;
+  width: 200px;
+  border: 1px solid #171513;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.project-card .future .more h1 {
+  font-family: Merriweather, serif;
+  font-size: 6rem;
+}
+
 .project-card h3 {
+  border-top: 1px solid #171513;
   margin: 0;
+  padding: 8px 0 0;
   font-family: Bebas Neue, cursive;
   font-size: 1.8rem;
 }
 
 .project-card p {
+  flex-grow: 1;
   font-family: Merriweather, serif;
 }
 
-.project-card .image-carousel {
+.project-card .images {
   width: 100%;
   justify-content: center;
   padding: 16px 0;
   display: flex;
 }
 
-.project-card .image-carousel img {
+.project-card .images img {
   max-height: 250px;
   padding: 0 4px;
 }
@@ -7973,6 +8131,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
   touch-action: manipulation;
+  z-index: 5;
   background-color: #0000;
   border: 1px solid #171513;
   outline: 0;
@@ -7983,16 +8142,19 @@ body {
 
 .project-card .stacks .stack-btn a {
   color: #f0e7de;
+  z-index: 6;
   font-family: Merriweather, serif;
   font-weight: bold;
   text-decoration: none;
+  position: relative;
 }
 
 .project-card .stacks .stack-btn:after {
   content: "";
   width: 100%;
-  z-index: -1;
+  z-index: 3;
   height: 100%;
+  z-index: 2;
   background-color: #171513;
   transition: all .2s;
   position: absolute;
@@ -8005,52 +8167,62 @@ body {
   left: 0;
 }
 
-.project-card .links {
-  justify-content: center;
-  display: flex;
+.project-card:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  background-color: #ba2f28;
+  outline: 0;
+  transition: all .2s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.project-card .links i {
-  color: #171513;
-  padding: 16px;
-  font-size: 35px;
-  transition: font-size .2s ease-out;
-  overflow: hidden;
-}
-
-.project-card .links i:hover {
-  color: #3f3831;
-  font-size: 40px;
+.project-card:hover:after {
+  top: 8px;
+  left: 8px;
 }
 
 footer {
   background-color: #171513;
-  margin: 0 auto;
-  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 16px 120px 16px 16px;
+  display: flex;
 }
 
 footer h1 {
   color: #f0e7de;
-  margin: 0 auto;
+  margin: 0;
   padding: 8px;
   font-family: Bebas Neue, cursive;
   font-size: 4rem;
+  font-weight: lighter;
+}
+
+footer p {
+  color: #f0e7de;
+  margin: 0;
+  padding: 8px;
+  font-family: Merriweather, serif;
 }
 
 footer .footer-links {
-  justify-content: center;
+  justify-content: left;
   display: flex;
 }
 
 footer .footer-links i {
   color: #f0e7de;
-  padding: 16px;
+  padding: 8px;
   font-size: 35px;
-  transition: font-size .2s ease-out;
 }
 
-footer .footer-links .email p {
-  color: #f0e7de;
+footer .footer-links i:hover {
+  color: #3f3831;
 }
 
 /*# sourceMappingURL=index.d719f592.css.map */
