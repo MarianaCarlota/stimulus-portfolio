@@ -5,5 +5,23 @@ body {
 }
 
 .container {
-  margin: 16px 80px 16px 16px;
+  margin: 16px 100px 16px 16px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(240, 231, 222);
+  border: 1px solid rgb(23, 21, 19);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(23, 21, 19);
+}
+
+html {
+  scroll-behavior: smooth;
 }

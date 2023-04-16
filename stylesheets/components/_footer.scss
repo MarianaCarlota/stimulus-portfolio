@@ -1,14 +1,18 @@
-footer {
+#section-footer {
   background-color: rgb(23, 21, 19);
-  margin: 0 auto;
-  padding: 16px;
+  margin: 0;
+  padding: 16px 120px 40px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   h1 {
     font-family: $headers-font;
     font-size: 4rem;
     padding: 8px;
-    margin: 0 auto;
+    margin: 0;
     color: rgb(240, 231, 222);
+    font-weight: lighter;
   }
 
   p {
@@ -16,10 +20,6 @@ footer {
     color: rgb(240, 231, 222);
     padding: 8px;
     margin: 0;
-
-    i {
-      padding-right: 8px;
-    }
   }
 
   .footer-links {
@@ -30,7 +30,6 @@ footer {
       font-size: 35px;
       color: rgb(240, 231, 222);
       padding: 8px;
-      transition: font-size 0.2s ease-out;
     }
 
     i:hover {

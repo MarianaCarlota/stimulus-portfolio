@@ -9,40 +9,57 @@
     <link rel="stylesheet" href="/stylesheets/application.scss">
     <script type="module" src="/javascript/application.js" defer></script>
   </head>
+
   <body>
     <div class="side-menu">
+      <div class="menu-home">
+        <a href="#land-page">
+          <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+
       <div class="menu-projects">
-        <h3>Projects</h3>
+        <a href="#section-projects">
+          <h3>Projects</h3>
+        </a>
       </div>
 
       <div class="menu-about">
-        <h3>About</h3>
+        <a href="#section-about">
+          <h3>About</h3>
+        </a>
       </div>
 
       <div class="menu-contacts">
-        <h3>Contacts</h3>
+        <a href="#section-footer">
+          <h3>Contacts</h3>
+        </a>
       </div>
 
     </div>
 
-    <div class="land-page">
+    <div id="land-page">
       <div class="banner-image">
         <img src="images/banner.jpg" alt="">
       </div>
 
       <div class="info">
-        <span data-controller="menu"></span>
         <h1><strong>Mariana Carlota</strong></h1>
         <h3>Fullstack Web Developer</h3>
       </div>
     </div>
 
     <div class="container"></div>
-      <div class="section">
+      <div id="section-projects">
         <h1><strong>Projects</strong></h1>
         <div class="projects-cards">
           <div class="project-card">
-            <h2>Rentart</h2>
+            <div class="title">
+              <h2>Rentart</h2>
+              <div class="links">
+                <a href="https://github.com/wJoenn/rentart" target="_blank"><i class="fa-brands fa-github"></i></i></a>
+              </div>
+            </div>
 
             <div class="images">
               <img src="images/rentart_homepage.png" alt="">
@@ -52,20 +69,22 @@
             <p>AirBnb clone. Platform for renting pieces of art</p>
             <h3>Stacks</h3>
             <div class="stacks">
-              <button class="stack-btn"><a href="https://rubyonrails.org/">Ruby on Rails</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">CSS</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">HTML5</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">postgreSQL</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">Javascript</a></button>
-            </div>
-
-            <div class="links">
-              <a href="https://github.com/wJoenn/rentart"><i class="fa-brands fa-github"></i></i></a>
+              <button class="stack-btn"><a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a></button>
+              <button class="stack-btn"><a href="https://sass-lang.com/" target="_blank">SCSS</a></button>
+              <button class="stack-btn"><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a></button>
+              <button class="stack-btn"><a href="https://www.postgresql.org/" target="_blank">postgreSQL</a></button>
+              <button class="stack-btn"><a href="https://stimulus.hotwired.dev/" target="_blank">Stimulus.js</a></button>
             </div>
           </div>
 
           <div class="project-card">
-            <h2>Artify</h2>
+            <div class="title">
+              <h2>Artify</h2>
+              <div class="links">
+                <a href="https://github.com/wJoenn/artify"><i class="fa-brands fa-github"></i></i></a>
+                <a href="https://www.artify.click/"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
 
             <div class="images">
               <img src="images/artify_logo.jpg" alt="">
@@ -75,29 +94,36 @@
             </div>
 
             <h3>About</h3>
-            <p>Website designed for mobile with Ruby on Rails where it is possible to take a picture of a monument or landmark anywhere in the world and get information about it. The picture recognition is made with google API <i>Cloud Vision</i> and the information about the landmark is generated with the Wikipedia's API</p>
+            <p>Website designed for mobile with Ruby on Rails where it is possible to take a picture of a monument or landmark anywhere in the world and get information about it. The picture recognition is made with google API <i>Cloud Vision</i> and the information about the landmark is generated with the Wikipedia's API.</p>
             <h3>Stacks</h3>
             <div class="stacks">
-              <button class="stack-btn"><a href="https://rubyonrails.org/">Ruby on Rails</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">CSS</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">HTML5</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">postgreSQL</a></button>
-              <button class="stack-btn"><a href="https://rubyonrails.org/">Javascript</a></button>
+              <button class="stack-btn"><a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a></button>
+              <button class="stack-btn"><a href="https://sass-lang.com/" target="_blank">SCSS</a></button>
+              <button class="stack-btn"><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a></button>
+              <button class="stack-btn"><a href="https://www.postgresql.org/" target="_blank">postgreSQL</a></button>
+              <button class="stack-btn"><a href="https://stimulus.hotwired.dev/" target="_blank">Stimulus.js</a></button>
             </div>
+          </div>
 
-            <div class="links">
-              <a href="https://github.com/wJoenn/artify"><i class="fa-brands fa-github"></i></i></a>
-              <a href="https://www.artify.click/"><i class="fa-solid fa-link"></i></a>
+          <div class="project-card">
+            <div class="title">
+              <h2>FUTURE PROJECTS</h2>
+            </div>
+            <p>The future looks promising! There is plenty of space for more...</p>
+            <div class="future">
+              <div class="more">
+                <h1>+</h1>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="section">
+      <div id="section-about">
         <h1><strong>About me</strong></h1>
         <div class="about-me">
           <div class="description">
-            <p>Hello there! You can call me Mariana :) I was born in the south of Portugal and grow up in a small town near the shore. I have lived in different cities in the country from Lisbon to Porto.</p>
+            <p>Hello there! You can call me Mariana. I was born in the south of Portugal and grow up in a small town near the shore. I have lived in different cities in the country from Algarve to Lisbon and to Porto.</p>
 
             <p>I have recently graduated from a <strong>web development bootcamp</strong> at <i>Le Wagon</i> where I found a new passion: <strong>CODDING!</strong> During the bootcamp, I had the opportunity to built exciting projects and acquired new skills that I'm still developing every day.</p>
 
@@ -105,16 +131,26 @@
 
             <p>In my free time I enjoy <strong>reading</strong>, <strong>running</strong> <i>(run the Lisbon half marathon in 2022)</i>, <strong>traveling</strong>, <strong>drawing</strong>, <strong>sewing</strong> and, of course <strong>codding!</strong></p>
           </div>
+
+          <div class="photo">
+            <img src="images/about_me.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
 
-    <footer>
-      <h1><strong>Contact me</strong></h1>
-      <p><i class="fa-solid fa-envelope"></i> marianacc99@hotmail.com</p>
+    <footer id="section-footer">
+      <div class="contact-me">
+        <h1><strong>Contact me</strong></h1>
+      </div>
+
+      <div class="email">
+        <p>marianacc99@hotmail.com</p>
+      </div>
+
       <div class="footer-links">
-        <a href="https://github.com/wJoenn/artify"><i class="fa-brands fa-github"></i></i></a>
-        <a href="https://www.linkedin.com/in/mariana-carlota/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/MarianaCarlota" target="_blank"><i class="fa-brands fa-github"></i></i></a>
+        <a href="https://www.linkedin.com/in/mariana-carlota/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </footer>
   </body>
