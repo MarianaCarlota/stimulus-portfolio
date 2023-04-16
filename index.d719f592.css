@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  margin: 16px 80px 16px 16px;
+  margin: 16px 100px 16px 16px;
 }
 
 ::-webkit-scrollbar {
@@ -23,16 +23,20 @@ body {
   background: #171513;
 }
 
-.land-page {
+html {
+  scroll-behavior: smooth;
+}
+
+#land-page {
   height: 100vh;
   border-bottom: 1px solid #171513;
   grid-template-columns: 2fr 3fr;
   align-items: center;
-  margin-right: 80px;
+  margin-right: 100px;
   display: grid;
 }
 
-.land-page .banner-image img {
+#land-page .banner-image img {
   height: 100vh;
   object-fit: cover;
   object-position: center;
@@ -40,18 +44,18 @@ body {
   flex-shrink: 0;
 }
 
-.land-page .info {
+#land-page .info {
   padding: 16px;
 }
 
-.land-page .info h1 {
+#land-page .info h1 {
   margin: 0 auto;
   padding: 8px;
   font-family: Bebas Neue, cursive;
   font-size: 5rem;
 }
 
-.land-page .info h3 {
+#land-page .info h3 {
   margin: 0 auto;
   padding: 0 8px;
   font-family: Merriweather, serif;
@@ -60,6 +64,7 @@ body {
 .side-menu {
   height: 100vh;
   z-index: 10;
+  width: 64px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: end;
@@ -73,32 +78,41 @@ body {
   width: 64px;
   cursor: pointer;
   margin: 0;
-  padding: 8px 24px;
+  padding: 0;
+  text-decoration: none;
   transition-property: width;
   transition-duration: .5s;
   display: flex;
   position: relative;
 }
 
-.side-menu * h3 {
+.side-menu * a {
   margin: 0;
   padding: 0;
+}
+
+.side-menu * a h3 {
+  color: #171513;
+  margin: 0;
+  padding: 16px;
   font-family: Bebas Neue, cursive;
   font-size: 2.5rem;
+  text-decoration: none;
 }
 
 .side-menu .menu-home {
   background-color: #171513;
   border: 1px solid #171513;
-  padding: 8px;
 }
 
 .side-menu .menu-home i {
   color: #f0e7de;
-  padding: 8px;
+  margin: 0;
+  padding: 24px;
 }
 
 .side-menu .menu-projects {
+  width: 64px;
   background-color: #f0e7de;
   border: 1px solid #171513;
   flex-grow: 1;
@@ -106,17 +120,24 @@ body {
 
 .side-menu .menu-about {
   height: 100px;
+  width: 64px;
   background-color: #171513;
   border: 1px solid #171513;
 }
 
-.side-menu .menu-about h3 {
+.side-menu .menu-about a {
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu .menu-about a h3 {
   color: #f0e7de;
   font-weight: lighter;
 }
 
 .side-menu .menu-contacts {
   height: 100px;
+  width: 64px;
   background-color: #ba2f28;
   border: 1px solid #171513;
 }
@@ -125,39 +146,52 @@ body {
   width: 200px;
 }
 
-.section {
+#section-projects {
   border-bottom: 1px solid #171513;
   margin: 16px 80px 16px 16px;
   padding: 32px 0;
 }
 
-.section h1 {
+#section-projects h1 {
   margin: 0 auto;
   padding: 8px;
   font-family: Bebas Neue, cursive;
   font-size: 4rem;
 }
 
-.section .about-me {
+#section-about {
+  border-bottom: 1px solid #171513;
+  margin: 16px 80px 16px 16px;
+  padding: 32px 0;
+}
+
+#section-about h1 {
+  margin: 0 auto;
+  padding: 8px;
+  font-family: Bebas Neue, cursive;
+  font-size: 4rem;
+}
+
+#section-about .about-me {
   grid-template-columns: 1fr 1fr;
   display: grid;
 }
 
-.section .about-me .description {
+#section-about .about-me .description {
   padding: 16px;
 }
 
-.section .about-me .description p {
+#section-about .about-me .description p {
   font-family: Merriweather, serif;
 }
 
-.section .about-me .photo {
+#section-about .about-me .photo {
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.section .about-me .photo img {
+#section-about .about-me .photo img {
   height: 350px;
   object-fit: cover;
   object-position: center;
@@ -8185,16 +8219,16 @@ body {
   left: 8px;
 }
 
-footer {
+#section-footer {
   background-color: #171513;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 16px 120px 16px 16px;
+  padding: 16px 120px 40px 16px;
   display: flex;
 }
 
-footer h1 {
+#section-footer h1 {
   color: #f0e7de;
   margin: 0;
   padding: 8px;
@@ -8203,25 +8237,25 @@ footer h1 {
   font-weight: lighter;
 }
 
-footer p {
+#section-footer p {
   color: #f0e7de;
   margin: 0;
   padding: 8px;
   font-family: Merriweather, serif;
 }
 
-footer .footer-links {
+#section-footer .footer-links {
   justify-content: left;
   display: flex;
 }
 
-footer .footer-links i {
+#section-footer .footer-links i {
   color: #f0e7de;
   padding: 8px;
   font-size: 35px;
 }
 
-footer .footer-links i:hover {
+#section-footer .footer-links i:hover {
   color: #3f3831;
 }
 
