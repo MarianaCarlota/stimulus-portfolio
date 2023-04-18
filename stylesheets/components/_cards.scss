@@ -26,7 +26,7 @@
 
       i {
         font-size: 30px;
-        color: rgb(23, 21, 19);
+        color: $secondary-color;
         padding: 8px;
       }
 
@@ -132,7 +132,7 @@
 
 .project-card:after {
   outline: 0;
-  background-color: rgb(186, 47, 40);
+  background-color: $red;
   content: "";
   width: 100%;
   z-index: -1;
@@ -146,4 +146,58 @@
 .project-card:hover:after {
   top: 8px;
   left: 8px;
+}
+
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 540px) {
+  .project-card {
+    padding: 16px;
+    height: 580px;
+
+    .title h2 {
+      font-size: 2rem;
+    }
+
+    .links i {
+        font-size: 25px;
+    }
+
+    .future .more {
+      height: 150px;
+      width: 150px;
+    }
+
+    h3 {
+      font-family: $headers-font;
+      font-size: 1.8rem;
+      margin: 0;
+      padding: 8px 0 0;
+      border-top: 1px solid $secondary-color;
+    }
+
+    p {
+      font-family: $body-font;
+      flex-grow: 1;
+    }
+
+    .images {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+
+      img {
+        max-height: 130px;
+        padding: 0 4px;
+      }
+    }
+
+    .stacks .stack-btn {
+      padding: 6px 8px;
+    }
+  }
+
 }

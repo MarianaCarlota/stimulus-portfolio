@@ -25,3 +25,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 960px) {
+  .container {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    margin: 16px;
+  }
+}
