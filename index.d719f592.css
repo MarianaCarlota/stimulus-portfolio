@@ -27,6 +27,24 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 960px) {
+  .container {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    margin: 16px;
+  }
+}
+
 #land-page {
   height: 100vh;
   border-bottom: 1px solid #171513;
@@ -211,6 +229,7 @@ html {
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
+  padding: 24px;
 }
 
 .projects-cards {
@@ -218,6 +237,111 @@ html {
   width: 100% vw;
   grid-template-columns: 1fr 1fr;
   display: grid;
+}
+
+@media (max-width: 960px) {
+  .projects-cards {
+    width: 100% vw;
+    grid-template-columns: 1fr;
+    margin: 16px 48px;
+    display: grid;
+  }
+}
+
+@media (max-width: 540px) {
+  #land-page {
+    grid-template-columns: 1fr;
+    margin-right: 56px;
+    display: grid;
+  }
+
+  #land-page .banner-image img {
+    height: 70vh;
+  }
+
+  #land-page .info {
+    padding: 8px;
+  }
+
+  #land-page .info h1 {
+    font-size: 3.2rem;
+  }
+
+  #land-page .info h2 {
+    font-size: 2.8rem;
+  }
+
+  #land-page .info h3 {
+    padding: 0 0 48px;
+  }
+
+  .side-menu, .side-menu * {
+    width: 40px;
+  }
+
+  .side-menu * a {
+    margin: 0;
+    padding: 0;
+  }
+
+  .side-menu * a h3 {
+    transform-origin: 0 0;
+    margin: 0;
+    padding: 8px;
+    font-size: 1.8rem;
+    position: absolute;
+    left: 45px;
+    transform: rotate(90deg);
+  }
+
+  .side-menu .menu-home i {
+    padding: 12px;
+  }
+
+  .side-menu .menu-projects {
+    width: 40px;
+  }
+
+  .side-menu .menu-about, .side-menu .menu-contacts {
+    width: 40px;
+    height: 120px;
+  }
+
+  #section-projects {
+    margin: 8px 56px 8px 8px;
+    padding: 8px 0;
+  }
+
+  #section-projects h1 {
+    padding: 0;
+    font-size: 3rem;
+  }
+
+  #section-projects .projects-cards {
+    width: 100% vw;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  #section-about {
+    border-bottom: 1px solid #171513;
+    margin: 8px 56px 8px 8px;
+    padding: 8px 0;
+  }
+
+  #section-about h1 {
+    padding: 0;
+    font-size: 3.2rem;
+  }
+
+  #section-about .about-me {
+    grid-template-columns: 1fr;
+  }
+
+  #section-about .about-me .description {
+    padding: 0;
+  }
 }
 
 .fa {
@@ -8234,6 +8358,55 @@ html {
   left: 8px;
 }
 
+@media (max-width: 540px) {
+  .project-card {
+    height: 580px;
+    padding: 16px;
+  }
+
+  .project-card .title h2 {
+    font-size: 2rem;
+  }
+
+  .project-card .links i {
+    font-size: 25px;
+  }
+
+  .project-card .future .more {
+    height: 150px;
+    width: 150px;
+  }
+
+  .project-card h3 {
+    border-top: 1px solid #171513;
+    margin: 0;
+    padding: 8px 0 0;
+    font-family: Bebas Neue, cursive;
+    font-size: 1.8rem;
+  }
+
+  .project-card p {
+    flex-grow: 1;
+    font-family: Merriweather, serif;
+  }
+
+  .project-card .images {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 0;
+    display: flex;
+  }
+
+  .project-card .images img {
+    max-height: 130px;
+    padding: 0 4px;
+  }
+
+  .project-card .stacks .stack-btn {
+    padding: 6px 8px;
+  }
+}
+
 #section-footer {
   background-color: #171513;
   justify-content: space-between;
@@ -8272,6 +8445,29 @@ html {
 
 #section-footer .footer-links i:hover {
   color: #3f3831;
+}
+
+@media (max-width: 960px) {
+  #section-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 32px 40px 8px;
+    display: flex;
+  }
+}
+
+@media (max-width: 540px) {
+  #section-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 48px 40px 8px;
+    display: flex;
+  }
+
+  #section-footer h1 {
+    padding: 32px;
+    font-size: 3.2rem;
+  }
 }
 
 /*# sourceMappingURL=index.d719f592.css.map */
