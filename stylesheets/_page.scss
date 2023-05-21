@@ -61,7 +61,7 @@
     padding: 0;
     display: flex;
     transition-property: width;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     cursor: pointer;
     position: relative;
     text-decoration: none;
@@ -77,6 +77,10 @@
         padding: 16px;
         text-decoration: none;
         color: $secondary-color;
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        position: absolute;
+        left: 70px;
       }
     }
   }
@@ -100,7 +104,7 @@
 
   .menu-about {
     border: 1px solid $secondary-color;
-    height: 100px;
+    height: 110px;
     background-color: $secondary-color;
     width: 64px;
 
@@ -117,13 +121,13 @@
 
   .menu-contacts {
     border: 1px solid $secondary-color;
-    height: 100px;
+    height: 160px;
     background-color: $red;
     width: 64px;
     }
 
   *:hover {
-    width: 200px;
+    width: 100px;
   }
 }
 
@@ -137,51 +141,6 @@
     font-size: 4rem;
     padding: 8px;
     margin: 0 auto;
-  }
-}
-
-#section-about {
-  border-bottom: 1px solid $secondary-color;
-  margin: 16px 100px 16px 16px;
-  padding: 32px 0;
-
-  h1 {
-    font-family: $headers-font;
-    font-size: 4rem;
-    padding: 8px;
-    margin: 0 auto;
-  }
-
-  .about-me {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    .description {
-      padding: 16px;
-
-      p {
-        font-family: $body-font;
-
-        a {
-          color: $secondary-color;
-          text-decoration: none;
-          color: $red;
-        }
-      }
-    }
-
-    .photo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        padding: 24px;
-        flex-shrink: 0;
-        height: 350px;
-        object-fit: cover;
-        object-position: center;
-      }
-    }
   }
 }
 
@@ -286,25 +245,6 @@
       grid-template-columns: 1fr;
       width: 100%vw;
       margin: 0 auto;
-    }
-  }
-
-  #section-about {
-    border-bottom: 1px solid $secondary-color;
-    margin: 8px 56px 8px 8px;
-    padding: 8px 0;
-
-    h1 {
-      font-size: 3.2rem;
-      padding: 0;
-    }
-
-    .about-me {
-      grid-template-columns: 1fr;
-
-      .description {
-        padding: 0;
-      }
     }
   }
 }

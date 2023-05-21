@@ -1,0 +1,254 @@
+h2 {
+  color: $secondary-color;
+  font-family: $headers-font;
+  font-size: 2rem;
+  margin: 8px 0px;
+}
+
+#section-about {
+  border-bottom: 1px solid $secondary-color;
+  margin: 16px 100px 16px 16px;
+  padding: 32px 0;
+
+  h1 {
+    font-family: $headers-font;
+    font-size: 4rem;
+    padding: 8px;
+    margin: 0 auto;
+  }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    * {
+      p {
+        font-family: $body-font;
+      }
+    }
+
+    .about-me-intro {
+      padding: 24px;
+
+      .intro-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+
+        img {
+          padding: 24px;
+          flex-shrink: 0;
+          height: 350px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    .education {
+      display: flex;
+      justify-content: space-around;
+      padding: 24px;
+
+      .about-me-education {
+
+        p {
+          font-family: $body-font;
+
+          strong {
+            color: $red;
+          }
+        }
+
+          .coding-rectangle {
+            display: flex;
+            justify-content: center;
+
+            .coding {
+              border: 1px solid $red;
+              display: flex;
+              background-color: $main-color;
+
+              h2 {
+                margin: 4px;
+                position: relative;
+                background-color: $red;
+                color: $main-color;
+                font-family: $headers-font;
+                text-align: center;
+                padding: 0px 24px;
+                font-weight: lighter;
+                font-size: 3rem;
+              }
+            }
+          }
+
+        .education-lewagon {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          h1 {
+            color: $secondary-color;
+            font-family: $headers-font;
+            font-size: 2rem;
+            margin: 8px 0px;
+          }
+
+          img {
+            height: 40px;
+            margin: 4px;
+            transition: transform .3s;
+          }
+
+          img:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .my-stacks {
+          .stacks-img {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .img-stack {
+              padding: 4px;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-me-past {
+  padding: 16px;
+
+  .about-me-background {
+    border: 1px solid $secondary-color;
+    padding: 24px;
+
+    .fashion-img {
+      display: flex;
+      justify-content: center;
+      img {
+        height: 180px;
+        margin: 8px;
+      }
+    }
+  }
+}
+
+.about-me-hobbies {
+  padding: 24px;
+
+  .hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+
+    .hobby {
+      text-align: center;
+      width: 130px;
+      height: 100px;
+      padding: 8px 0;
+
+      h3 {
+        color: $secondary-color;
+        font-family: $headers-font;
+        font-weight: lighter;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      p {
+        font-size: 0.7rem;
+        margin: 4px;
+
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+        }
+
+        a:hover {
+          color: $hover-color;
+        }
+      }
+
+      i {
+        font-size: 2rem;
+        color: $red;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 960px) {
+  #section-about {
+    .about-me {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  }
+
+  .education {
+    padding: 0;
+
+    .about-me-education {
+      .my-stacks {
+        .stacks-img {
+          justify-content: left;
+
+          .img-stack {
+            padding: 4px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  #section-about {
+    border-bottom: 1px solid $secondary-color;
+    margin: 8px 56px 8px 8px;
+    padding: 8px 0;
+
+    h1 {
+      font-size: 3.2rem;
+      padding: 0;
+    }
+
+    .about-me {
+      grid-template-columns: 1fr;
+      padding: 0;
+
+      .about-me-intro {
+        padding: 0px;
+      }
+
+      .education {
+        padding: 0;
+      }
+
+      .about-me-past {
+        padding: 8px 0;
+      }
+
+      .about-me-background {
+        padding: 16px;
+        margin: 0 auto;
+        .fashion-img {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
