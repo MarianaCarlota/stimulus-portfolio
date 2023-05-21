@@ -108,7 +108,7 @@ html {
   padding: 0;
   text-decoration: none;
   transition-property: width;
-  transition-duration: .5s;
+  transition-duration: .3s;
   display: flex;
   position: relative;
 }
@@ -120,11 +120,15 @@ html {
 
 .side-menu * a h3 {
   color: #171513;
+  transform-origin: 0 0;
   margin: 0;
   padding: 16px;
   font-family: Bebas Neue, cursive;
   font-size: 2.5rem;
   text-decoration: none;
+  position: absolute;
+  left: 70px;
+  transform: rotate(90deg);
 }
 
 .side-menu .menu-home {
@@ -146,7 +150,7 @@ html {
 }
 
 .side-menu .menu-about {
-  height: 100px;
+  height: 110px;
   width: 64px;
   background-color: #171513;
   border: 1px solid #171513;
@@ -163,14 +167,14 @@ html {
 }
 
 .side-menu .menu-contacts {
-  height: 100px;
+  height: 160px;
   width: 64px;
   background-color: #ba2f28;
   border: 1px solid #171513;
 }
 
 .side-menu :hover {
-  width: 200px;
+  width: 100px;
 }
 
 #section-projects {
@@ -184,52 +188,6 @@ html {
   padding: 8px;
   font-family: Bebas Neue, cursive;
   font-size: 4rem;
-}
-
-#section-about {
-  border-bottom: 1px solid #171513;
-  margin: 16px 100px 16px 16px;
-  padding: 32px 0;
-}
-
-#section-about h1 {
-  margin: 0 auto;
-  padding: 8px;
-  font-family: Bebas Neue, cursive;
-  font-size: 4rem;
-}
-
-#section-about .about-me {
-  grid-template-columns: 1fr 1fr;
-  display: grid;
-}
-
-#section-about .about-me .description {
-  padding: 16px;
-}
-
-#section-about .about-me .description p {
-  font-family: Merriweather, serif;
-}
-
-#section-about .about-me .description p a {
-  color: #171513;
-  color: #ba2f28;
-  text-decoration: none;
-}
-
-#section-about .about-me .photo {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-#section-about .about-me .photo img {
-  height: 350px;
-  object-fit: cover;
-  object-position: center;
-  flex-shrink: 0;
-  padding: 24px;
 }
 
 .projects-cards {
@@ -322,25 +280,6 @@ html {
     grid-template-columns: 1fr;
     margin: 0 auto;
     display: grid;
-  }
-
-  #section-about {
-    border-bottom: 1px solid #171513;
-    margin: 8px 56px 8px 8px;
-    padding: 8px 0;
-  }
-
-  #section-about h1 {
-    padding: 0;
-    font-size: 3.2rem;
-  }
-
-  #section-about .about-me {
-    grid-template-columns: 1fr;
-  }
-
-  #section-about .about-me .description {
-    padding: 0;
   }
 }
 
@@ -8467,6 +8406,245 @@ html {
   #section-footer h1 {
     padding: 32px;
     font-size: 3.2rem;
+  }
+}
+
+h2 {
+  color: #171513;
+  margin: 8px 0;
+  font-family: Bebas Neue, cursive;
+  font-size: 2rem;
+}
+
+#section-about {
+  border-bottom: 1px solid #171513;
+  margin: 16px 100px 16px 16px;
+  padding: 32px 0;
+}
+
+#section-about h1 {
+  margin: 0 auto;
+  padding: 8px;
+  font-family: Bebas Neue, cursive;
+  font-size: 4rem;
+}
+
+#section-about .about-me {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+}
+
+#section-about .about-me * p {
+  font-family: Merriweather, serif;
+}
+
+#section-about .about-me .about-me-intro {
+  padding: 24px;
+}
+
+#section-about .about-me .about-me-intro .intro-img {
+  justify-content: center;
+  align-self: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+#section-about .about-me .about-me-intro .intro-img img {
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  padding: 24px;
+}
+
+#section-about .about-me .education {
+  justify-content: space-around;
+  padding: 24px;
+  display: flex;
+}
+
+#section-about .about-me .education .about-me-education p {
+  font-family: Merriweather, serif;
+}
+
+#section-about .about-me .education .about-me-education p strong {
+  color: #ba2f28;
+}
+
+#section-about .about-me .education .about-me-education .coding-rectangle {
+  justify-content: center;
+  display: flex;
+}
+
+#section-about .about-me .education .about-me-education .coding-rectangle .coding {
+  background-color: #f0e7de;
+  border: 1px solid #ba2f28;
+  display: flex;
+}
+
+#section-about .about-me .education .about-me-education .coding-rectangle .coding h2 {
+  color: #f0e7de;
+  text-align: center;
+  background-color: #ba2f28;
+  margin: 4px;
+  padding: 0 24px;
+  font-family: Bebas Neue, cursive;
+  font-size: 3rem;
+  font-weight: lighter;
+  position: relative;
+}
+
+#section-about .about-me .education .about-me-education .education-lewagon {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+#section-about .about-me .education .about-me-education .education-lewagon h1 {
+  color: #171513;
+  margin: 8px 0;
+  font-family: Bebas Neue, cursive;
+  font-size: 2rem;
+}
+
+#section-about .about-me .education .about-me-education .education-lewagon img {
+  height: 40px;
+  margin: 4px;
+  transition: transform .3s;
+}
+
+#section-about .about-me .education .about-me-education .education-lewagon img:hover {
+  transform: scale(1.1);
+}
+
+#section-about .about-me .education .about-me-education .my-stacks .stacks-img {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+#section-about .about-me .education .about-me-education .my-stacks .stacks-img .img-stack {
+  height: 100px;
+  padding: 4px;
+}
+
+.about-me-past {
+  padding: 16px;
+}
+
+.about-me-past .about-me-background {
+  border: 1px solid #171513;
+  padding: 24px;
+}
+
+.about-me-past .about-me-background .fashion-img {
+  justify-content: center;
+  display: flex;
+}
+
+.about-me-past .about-me-background .fashion-img img {
+  height: 180px;
+  margin: 8px;
+}
+
+.about-me-hobbies {
+  padding: 24px;
+}
+
+.about-me-hobbies .hobbies {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  display: flex;
+}
+
+.about-me-hobbies .hobbies .hobby {
+  text-align: center;
+  width: 130px;
+  height: 100px;
+  padding: 8px 0;
+}
+
+.about-me-hobbies .hobbies .hobby h3 {
+  color: #171513;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Bebas Neue, cursive;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.about-me-hobbies .hobbies .hobby p {
+  margin: 4px;
+  font-size: .7rem;
+}
+
+.about-me-hobbies .hobbies .hobby p a {
+  color: #171513;
+  text-decoration: none;
+}
+
+.about-me-hobbies .hobbies .hobby p a:hover {
+  color: #3f3831;
+}
+
+.about-me-hobbies .hobbies .hobby i {
+  color: #ba2f28;
+  font-size: 2rem;
+}
+
+@media (max-width: 960px) {
+  #section-about .about-me {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .education {
+    padding: 0;
+  }
+
+  .education .about-me-education .my-stacks .stacks-img {
+    justify-content: left;
+  }
+
+  .education .about-me-education .my-stacks .stacks-img .img-stack {
+    height: 100px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 540px) {
+  #section-about {
+    border-bottom: 1px solid #171513;
+    margin: 8px 56px 8px 8px;
+    padding: 8px 0;
+  }
+
+  #section-about h1 {
+    padding: 0;
+    font-size: 3.2rem;
+  }
+
+  #section-about .about-me {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  #section-about .about-me .about-me-intro, #section-about .about-me .education {
+    padding: 0;
+  }
+
+  #section-about .about-me .about-me-past {
+    padding: 8px 0;
+  }
+
+  #section-about .about-me .about-me-background {
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  #section-about .about-me .about-me-background .fashion-img {
+    flex-wrap: wrap;
   }
 }
 
